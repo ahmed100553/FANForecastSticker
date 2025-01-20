@@ -12,7 +12,7 @@ class FANLayer(nn.Module):
             self.gate = nn.Parameter(torch.randn(1, dtype=torch.float32))
     
     def forward(self, src):
-        print(f"FANLayer input shape: {src.shape}")  # Debug input shape
+        #print(f"FANLayer input shape: {src.shape}")  # Debug input shape
         g = self.activation(self.input_linear_g(src))
         p = self.input_linear_p(src)
         
